@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2022 at 11:01 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.28
+-- Waktu pembuatan: 22 Nov 2022 pada 09.24
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
 CREATE TABLE `login` (
@@ -38,19 +38,18 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `login`
+-- Dumping data untuk tabel `login`
 --
 
 INSERT INTO `login` (`id_user`, `username`, `password`, `nama`, `jabatan`, `level`, `status`) VALUES
 (1, 'Admin', '21232f297a57a5a743894a0e4a801fc3', 'Superadmin', 'adm', 0, '1'),
 (30, 'staff', '21232f297a57a5a743894a0e4a801fc3', 'Staff QR Maker', 'mgr', 2, '1'),
-(32, 'manager', '21232f297a57a5a743894a0e4a801fc3', 'Manager QR Maker', 'mgr', 1, '0'),
-(34, 'test7', '098f6bcd4621d373cade4e832627b4f6', 'Tester Aja 7', 'mgr', 1, '0');
+(32, 'manager', '21232f297a57a5a743894a0e4a801fc3', 'Manager QR Maker', 'mgr', 1, '1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ms_jabatan`
+-- Struktur dari tabel `ms_jabatan`
 --
 
 CREATE TABLE `ms_jabatan` (
@@ -60,19 +59,19 @@ CREATE TABLE `ms_jabatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ms_jabatan`
+-- Dumping data untuk tabel `ms_jabatan`
 --
 
 INSERT INTO `ms_jabatan` (`id_jabatan`, `kode_jabatan`, `nama_jabatan`) VALUES
 (1, 'adm', 'Admin'),
-(2, 'mgr', 'Manager'),
+(2, 'asdw', 'manager'),
 (3, 'spv', 'Supervisor'),
 (4, 'staff', 'Staff');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ms_katalog`
+-- Struktur dari tabel `ms_katalog`
 --
 
 CREATE TABLE `ms_katalog` (
@@ -88,7 +87,7 @@ CREATE TABLE `ms_katalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ms_katalog`
+-- Dumping data untuk tabel `ms_katalog`
 --
 
 INSERT INTO `ms_katalog` (`id_katalog`, `kode_material`, `sn_mc_pln`, `no_material`, `material_group`, `id_material`, `kategori`, `deskripsi`, `status`) VALUES
@@ -113,7 +112,7 @@ INSERT INTO `ms_katalog` (`id_katalog`, `kode_material`, `sn_mc_pln`, `no_materi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ms_kategori`
+-- Struktur dari tabel `ms_kategori`
 --
 
 CREATE TABLE `ms_kategori` (
@@ -123,7 +122,7 @@ CREATE TABLE `ms_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ms_kategori`
+-- Dumping data untuk tabel `ms_kategori`
 --
 
 INSERT INTO `ms_kategori` (`id_kategori`, `kategori`, `status`) VALUES
@@ -132,7 +131,7 @@ INSERT INTO `ms_kategori` (`id_kategori`, `kategori`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ms_kode_pabrik`
+-- Struktur dari tabel `ms_kode_pabrik`
 --
 
 CREATE TABLE `ms_kode_pabrik` (
@@ -142,7 +141,7 @@ CREATE TABLE `ms_kode_pabrik` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ms_kode_pabrik`
+-- Dumping data untuk tabel `ms_kode_pabrik`
 --
 
 INSERT INTO `ms_kode_pabrik` (`id_kode_pabrik`, `kode_pabrikan`, `status`) VALUES
@@ -151,7 +150,7 @@ INSERT INTO `ms_kode_pabrik` (`id_kode_pabrik`, `kode_pabrikan`, `status`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ms_level`
+-- Struktur dari tabel `ms_level`
 --
 
 CREATE TABLE `ms_level` (
@@ -161,7 +160,7 @@ CREATE TABLE `ms_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ms_level`
+-- Dumping data untuk tabel `ms_level`
 --
 
 INSERT INTO `ms_level` (`id_level`, `level`, `nama_level`) VALUES
@@ -172,7 +171,7 @@ INSERT INTO `ms_level` (`id_level`, `level`, `nama_level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `trx_qrcode`
+-- Struktur dari tabel `trx_qrcode`
 --
 
 CREATE TABLE `trx_qrcode` (
@@ -203,83 +202,83 @@ CREATE TABLE `trx_qrcode` (
 --
 
 --
--- Indexes for table `login`
+-- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indexes for table `ms_jabatan`
+-- Indeks untuk tabel `ms_jabatan`
 --
 ALTER TABLE `ms_jabatan`
   ADD PRIMARY KEY (`id_jabatan`);
 
 --
--- Indexes for table `ms_katalog`
+-- Indeks untuk tabel `ms_katalog`
 --
 ALTER TABLE `ms_katalog`
   ADD PRIMARY KEY (`id_katalog`) USING BTREE;
 
 --
--- Indexes for table `ms_kategori`
+-- Indeks untuk tabel `ms_kategori`
 --
 ALTER TABLE `ms_kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `ms_kode_pabrik`
+-- Indeks untuk tabel `ms_kode_pabrik`
 --
 ALTER TABLE `ms_kode_pabrik`
   ADD PRIMARY KEY (`id_kode_pabrik`) USING BTREE;
 
 --
--- Indexes for table `ms_level`
+-- Indeks untuk tabel `ms_level`
 --
 ALTER TABLE `ms_level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indexes for table `trx_qrcode`
+-- Indeks untuk tabel `trx_qrcode`
 --
 ALTER TABLE `trx_qrcode`
   ADD PRIMARY KEY (`kode_serial_material`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `ms_jabatan`
+-- AUTO_INCREMENT untuk tabel `ms_jabatan`
 --
 ALTER TABLE `ms_jabatan`
   MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `ms_katalog`
+-- AUTO_INCREMENT untuk tabel `ms_katalog`
 --
 ALTER TABLE `ms_katalog`
   MODIFY `id_katalog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `ms_kategori`
+-- AUTO_INCREMENT untuk tabel `ms_kategori`
 --
 ALTER TABLE `ms_kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `ms_kode_pabrik`
+-- AUTO_INCREMENT untuk tabel `ms_kode_pabrik`
 --
 ALTER TABLE `ms_kode_pabrik`
-  MODIFY `id_kode_pabrik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_kode_pabrik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `ms_level`
+-- AUTO_INCREMENT untuk tabel `ms_level`
 --
 ALTER TABLE `ms_level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
