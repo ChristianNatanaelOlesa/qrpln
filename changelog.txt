@@ -1,0 +1,41 @@
+CHANGELOG 4 NOVEMBER 2022
+
+SIDEBAR
+> Perubahan nama - nama link redirect di sidebar
+> Tambah fitur untuk admin (DELETE DATA FILTER & RESET)
+
+DELETE DATA FILTER berfungsi untuk delete data dalam jumlah banyak, berdasarkan filter yang ingin digunakan
+
+RESET berfungsi untuk mengosongkan data di database. Data yang di update di database yaitu :
+- Mengosongkan table trx_qrcode
+- Merubah status semua data di ms_katalog menjadi 0 (Non Active)
+- Merubah status semua data di ms_kode_pabrik menjadi 0 (Non Active)
+- Merubah status semua data di ms_kategori menjadi 0 (Non Active)
+- Hapus file QR & Barcode yang sudah di generate menjadi png
+
+NAMA FILE YANG BERUBAH
+- add_qrcode.php menjadi add_trx.php
+- create_qrcode.php menjadi create_trx.php
+- generate_gambar_massal.php menjadi filter_create_gambar.php
+- delete_qrcode.php menjadi delete_trx.php
+- add_delete_banyak.php menjadi filter_delete_gambar.php
+- buatQRBarcode.php menjadi create_gambar.php
+
+TAMBAHAN FILE
+- create_gambar_massal.php
+- create_master.php (Menyatukan semua function create untuk data master menjadi 1 file)
+- update_master.php (Menyatukan semua function update untuk data master menjadi 1 file)
+- delete_master.php (Menyatukan semua function delete untuk data master menjadi 1 file)
+- filter_delete_data.php (Membuat view untuk delete data transaksi qprln berdasarkan filter yang di input)
+- delete_data_massal.php (Membuat function delete data transaksi qrpln berdasarkan filter yang di input)
+- mode_testing.php (membuat fungsi RESET)
+
+TAMBAH VALIDASI DI SEMUA FUNCTION UPDATE
+- Mengurangi kemungkinan duplicate data saat user ingin update data
+
+PENYESUAIAN UKURAN SAAT PRINT QR & BARCODE
+
+PENYESUAIAN NAMA FILE DAN NAMA LINK REDIRECT DI index.php
+
+DEBUGGING BEBERAPA BUG YANG TERJADI SAAT MELAKUKAN UPDATE DATA
+
