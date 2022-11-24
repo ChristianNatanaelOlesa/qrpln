@@ -26,8 +26,6 @@
   <link rel="stylesheet" href="assets/link/fonts.googleapis.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="assets/link/css/ionicframework.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- Theme style -->

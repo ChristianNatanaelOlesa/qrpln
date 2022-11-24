@@ -41,17 +41,6 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <script src="assets/link/kit.fontawesome.js"></script>
-
-  <script>
-  function validateForm() {
-    var x = document.forms["form_edit_user"]["username"].value;
-    if (x == "" || x == null) {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
-  </script>
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <?php if(isset($_SESSION['pesan']) && $_SESSION['pesan'] != '') { ?>
@@ -501,16 +490,14 @@
 <script src="assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- Select2 -->
+<script src="assets/plugins/select2/js/select2.full.min.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="assets/dist/js/demo.js"></script>
-
-
-<!-- Select2 -->
-<script src="assets/plugins/select2/js/select2.full.min.js"></script>
 
 <script>
   $(function () {
